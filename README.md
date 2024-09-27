@@ -1,7 +1,32 @@
-This learning example with real world project impact me the deep knowledge about Testing in software development world, the benefits of writing unit tests are huge. I think that most of the recently started projects contain any unit tests. In enterprise applications with a lot of business logic, unit tests are the most important tests, because they are fast and can  instantly assure that our implementation is correct. However, I often see a problem with good tests in projects, though these tests' benefits are only huge when you have good unit tests. So in these examples, I get to acquired good knowledge of it.
+# Sparky_AspDotNet_Testing
+Welcome to the Sparky_AspDotNet_Testing studies plus real world project! This application focuses on unit testing using .NET C#, employing NUnit Testing, Microsoft Testing and XUnit Testing frameworks alongside Moq for mocking dependencies. It follows SOLID principles and utilizes Entity Framework Core for data access.
 
-Example i created a class
-public class Caculator
+## Features
+* Unit Testing: Comprehensive tests for key components using NUnit.
+* Mocking with Moq: Efficiently simulate dependencies for isolated tests.
+* Authentication Testing: Validate security features and user authentication flows.
+* Entity Framework Core: Test data access logic with an emphasis on performance and reliability.
+
+## Tech Stack
+* Backend: .NET Core, C#
+* Testing Frameworks: NUnit, Microsoft Testing
+* Mocking Library: Moq
+* ORM: Entity Framework Core
+
+## Key Concepts
+* SOLID Principles: Ensures maintainable and scalable code architecture.
+* Unit Testing: Focus on individual components for accurate and efficient testing.
+* Mocking: Use of Moq to create mock objects for dependency isolation.
+
+# Getting Started
+Clone the repository.
+Restore NuGet packages.
+Run the tests using your preferred testing framework.
+For detailed setup instructions, check the [Github](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
+
+##Few sample of the code examples: 
+```public class Caculator
 {
     public List<int> NumberRange = new();
     public int AddNumber(int a, int b)
@@ -21,7 +46,6 @@ public class Caculator
 
     }
 }
-I now i test it using UnitTest and i can assure your that syntax between UnitTest, MSTest, XUnitTest and not much different
 
   [TestFixture]
   public class CalculatorNUnitTests
@@ -67,7 +91,7 @@ I now i test it using UnitTest and i can assure your that syntax between UnitTes
           //Assert
           Assert.That(result, Is.EqualTo(true));
           Assert.IsTrue(result);
-      }
+      }  
 
       [Test]
       [TestCase(10, ExpectedResult = false)]
@@ -84,12 +108,9 @@ I now i test it using UnitTest and i can assure your that syntax between UnitTes
          
       }
 }
+```
+Contributing
+Contributions are welcome! Please submit a pull request or open an issue for enhancements or suggestions.
 
-In the example i use Visual Studio as IDE 
+Happy testing! 🧪✨
 
---
-Use libraries such as 
-MOQ - to mock some testing especially when i initialize my interface,
-EntityFrameworkCore - to for creating our server side,
-SQL - to store our details. 
-S.O.L.I.D - architecture.
